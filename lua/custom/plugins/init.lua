@@ -6,10 +6,7 @@ return { -- ~/.config/nvim/lua/custom/plugins/init.lua
   -- other plugins...
   { 'tpope/vim-fugitive' },
   { 'rebelot/kanagawa.nvim' },
-  {
-    'goolord/alpha-nvim',
-    config = function()
-      require('alpha').setup(require('alpha.themes.startify').config)
-    end,
-  },
+
+  require 'custom.plugins.oil',
+  require 'custom.plugins.alpha',
 }
