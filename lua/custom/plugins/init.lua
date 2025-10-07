@@ -2,4 +2,14 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return { -- ~/.config/nvim/lua/custom/plugins/init.lua
+  -- other plugins...
+  { 'tpope/vim-fugitive' },
+  { 'rebelot/kanagawa.nvim' },
+  {
+    'goolord/alpha-nvim',
+    config = function()
+      require('alpha').setup(require('alpha.themes.startify').config)
+    end,
+  },
+}
