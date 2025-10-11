@@ -1,6 +1,6 @@
 return { -- ~/.config/nvim/lua/custom/plugins/init.lua
   -- other plugins...
-  { 'tpope/vim-fugitive' },
+  -- { 'tpope/vim-fugitive' },
   { 'rebelot/kanagawa.nvim' },
   --  { 'tpope/vim-vinegar' },
 

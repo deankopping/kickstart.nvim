@@ -1,8 +1,7 @@
 return {
-  -- Core Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
+    build = ':TSUpdate', -- `run` → renamed to `build` in Lazy
     opts = {
       ensure_installed = { 'typescript', 'tsx', 'python' },
       auto_install = true,
@@ -45,9 +44,24 @@ return {
     end,
   },
 
-  -- Treesitter textobjects
   {
     'nvim-treesitter/nvim-treesitter-textobjects',
     dependencies = 'nvim-treesitter/nvim-treesitter',
+  },
+
+  -- 🌲 Sticky Scroll
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    event = 'BufReadPre',
+    config = function()
+      require('treesitter-context').setup {
+        enable = true, -- Enable by default
+        max_lines = 1, -- How many lines of context to show
+        trim_scope = 'outer', -- When context is too large, trim outer blocks
+        mode = 'topline', -- Use cursor position (alternative: 'topline')
+        -- separator = '─',       -- Visual separator line (optional)
+      }
+    end,
   },
 }
