@@ -60,7 +60,6 @@ return {
         max_lines = 1, -- How many lines of context to show
         trim_scope = 'outer', -- When context is too large, trim outer blocks
         mode = 'topline', -- Use cursor position (alternative: 'topline')
-        -- separator = '─',       -- Visual separator line (optional)
       }
     end,
   },
