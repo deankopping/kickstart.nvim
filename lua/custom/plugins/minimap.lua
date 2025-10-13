@@ -44,7 +44,9 @@ return {
       auto_enable = true,
       git = {
         enabled = true,
-        mode = 'sign', -- Shows git changes as signs in the minimap
+        mode = 'icon',
+        priority = 6,
+        icons = { add = ' +', change = ' ~', delete = ' -' },
       },
     }
   end,
