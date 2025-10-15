@@ -6,4 +6,5 @@ return { -- ~/.config/nvim/lua/custom/plugins/init.lua
   require 'custom.plugins.oil',
   require 'custom.plugins.alpha',
   require 'custom.plugins.treesitter',
+  require 'custom.plugins.typescript-tools',
 }
